@@ -1,0 +1,525 @@
+/* :root - Selector especial utilizado para definir variables personalizadas de CSS que se pueden reutilizar en todo el documento. */
+:root {
+    --bg-color: #181419;
+    --bg-color1:#0d01ad;
+    --bg-color2:#2e0239;
+    /* Color de fondo */
+    --primary-color: #9f3647;
+    --secondary-color: #ffc098;
+    --third-color: #d5ea39;
+    --third-bis-color: #ffff52f2;
+    --bg-input-color: #4f31572c;
+    /*color de letras*/
+    --bg-color3: #ffffff;
+}
+
+
+body {
+    background-color: #D3D3D3;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+/* Selector Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Eliminar la decoración de los hipervínculos: */
+a {
+    text-decoration: none;
+}
+
+
+.h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Agregar color y tamaño de fuente a la etiqueta <h2></h2> */
+@keyframes titulo-animado {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+h2 {
+    color: #000000;
+    font-size: 1vw;
+    animation:titulo-animado 6s ease-in-out infinite;
+    animation-delay: 3s;
+}
+.h2{
+    color: var(--bg-color3);
+    font-size: 0.*9vw;
+    animation:titulo-animado 12s ease-in-out infinite;
+    animation-delay: 6s;
+
+}
+
+
+
+h3 {
+    color: #000000;
+    font-size: 0.7vw;
+    margin: 30px;
+    border-bottom: 1px solid #89a32b; /* Cambia el color según tu preferencia */
+    padding-bottom: 2px; /* Ajusta el espacio entre el texto y la línea */
+    
+    
+}
+/* Selector de id llamado logo para resaltar el texto en negrita */
+#logo {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top:70px;
+}
+
+/* Selector descendiente */
+#logo a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* Selector por id que identifica la sección del banner. */
+#banner {
+    background-image: url('../img/celulares_portada3.png');
+    background-size: cover;
+    /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+    background-position: center;
+    /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+    height: 150px;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+    /* establece una sombra interna actúa como un filtro. */
+}
+
+
+/* Selector id para la sección de Top Rated, películas más top */
+#top-rated {
+    margin: 15px 0px;
+}
+
+/* Estilos para los id #popular y #top rated */
+#popular,
+#top-rated {
+    text-align: center;
+}
+
+#popular h2,
+#top-rated h2 {
+    margin: 30px 0px;
+}
+
+/* Estilo para el footer */
+#footer a {
+    color: rgb(0, 0, 0) !important;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 20px;
+    text-decoration: none;
+    
+}
+
+/* Estilo para el footer para cuando se pasa el mouse */
+#footer a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+
+/* Estilo para el footer */
+#footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--third-bis-color);
+    height: 100px;
+    width: 100%;
+   
+}
+
+/* Estilo para Search */
+#search{
+    height: 100px;
+    display: flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin:0%;
+    margin-left: 330px; 
+    padding: opx; 
+
+}
+
+/* Estilo para la barra de búsqueda */
+.search-title {
+    color: white;
+    font-size: 1.2vw;
+}
+
+/*Ajustar tamaño de la imagen del producto*/
+
+
+.movie-item-img {
+    width: 200px;
+    height: 300px;
+
+    object-fit: contain;
+    /* Especifica cómo debe ajustarse y escalarse una imagen o un video. El valor cover asegura que el contenido se ajuste al contenedor manteniendo su proporción y cubriendo todo el espacio disponible. */
+    -o-object-fit: contain;
+    /* Este prefijo es necesario para que Opera pueda reconocer y aplicar la propiedad. */
+}
+
+/* Estilo que se usará desde JavaScript para que al recorrer la página el encabezado cambie de color. */
+.scrolled {
+    background-color: var(--third-color);
+}
+
+/* Modificaremos el color de fondo, color de fuente, posición del encabezado, ancho y profundidad. */
+.header {
+    /* display: flex; */
+    background-color: var(--third-bis-color);
+    color: #FFF;
+    position:fixed;
+    
+    /* Se utiliza para posicionar un elemento de forma fija en relación con la ventana del navegador, lo que significa que el elemento permanece en la misma posición, incluso cuando se desplaza la página. */
+    top: -70px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+    /* Se utiliza comúnmente en situaciones donde tienes elementos superpuestos, como menús desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qué elementos aparecen en la parte superior y cuáles quedan ocultos detrás de otros. */
+}
+
+/* Estilos para el botón. */
+.btn-cac {
+    background-color: var(--third-color);
+    padding: 10px;
+    /* Se aplica un espacio de 10 píxeles a los cuatro lados (arriba, abajo, izquierda y derecha) del elemento. */
+    border-radius: 10px;
+    /* Se establece un radio de curvatura de 10 píxeles para las esquinas del elemento. */
+    color: #0a0808;
+    cursor: pointer;
+    
+}
+
+/* Clase Container */
+.container {
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+/* Estilo para la tarjeta del banner */
+.card-banner {
+    margin: 0 auto;
+    /* Se utiliza comúnmente para centrar horizontalmente un elemento dentro de su contenedor. */
+    text-align: center;
+    padding: 0px 160px;
+    /* Aplica un relleno de cero píxeles en la parte superior e inferior del elemento y un relleno de 160 píxeles en los lados izquierdo y derecho. */
+}
+
+/* Estilo para la barra de búsqueda */
+.input-search {
+    background-color: whitesmoke;
+    border: 2px solid var(--third-bis-color);
+    border-radius: 15px;
+    color: black;
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. */
+    padding: 0px 20px;
+    width: 70%;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Estilo para el detalle de los ítems */
+.movie-item-detail {
+    bottom: -100%;
+    /* Se utiliza para posicionar un elemento en relación con su contenedor padre moviéndolo hacia abajo, fuera de la vista, exactamente un 100% de la altura del contenedor. */
+    padding: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    /* Se utiliza para controlar cómo se maneja el desbordamiento vertical del contenido dentro de un elemento. auto permite que aparezcan barras de desplazamiento solo cuando el contenido excede el tamaño del contenedor en el eje vertical. */
+    line-height: 15px;
+    /* Esta propiedad afecta al espacio vertical entre líneas de texto dentro del elemento. */
+    position: absolute;
+    /* Establece la posición del elemento de manera absoluta en relación con su contenedor padre posicionado. */
+    background-color: var(--third-bis-color);
+    box-sizing: border-box;
+    /* Define cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno (padding) y bordes. */
+    transition: bottom 0.4s ease-in-out;
+    width: 100%;
+}
+
+/* Estilo para el título de las películas */
+.movie-item-detail-title {
+    color: rgb(0, 0, 0);
+    margin: 5px 0px 0px 0px;
+    line-height: 1.2em;
+}
+
+/* Estilo para el subtítulo de las películas */
+.movie-item-detail-subtitle {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 3px 0px;
+}
+
+/* Estilo para Las más aclamadas */
+.wrapper {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    /* Se utiliza para aplicar sombras a un elemento. • El primer valor 0 representa el desplazamiento horizontal de la sombra. • El segundo valor 2px representa el desplazamiento vertical de la sombra. • El tercer valor 8px indica el desenfoque o difuminado de la sombra. • rgba(0,0,0,.1) define el color y la opacidad de la sombra. En este caso, se trata de un tono negro (0,0,0) con una opacidad del 10% (0.1).*/
+    border-radius: 10px;
+    width: 100%;
+    min-height: calc(150px*1.5);
+    /* Establece la altura mínima del elemento en 225 píxeles, asegurando que, aunque el contenido no sea suficiente para alcanzar esa altura, el elemento nunca se mostrará con una altura menor a 225 píxeles. */
+    height: calc(150px*1.5);
+    overflow: hidden;
+    /* Se oculta el contenido que sobresale más allá de los límites del contenedor. */
+}
+
+/* Estilo para las imágenes de Las más aclamadas */
+.movie-item-img-v2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Se utiliza para ajustar el tamaño del elemento para que llene completamente el contenedor. */
+    -o-object-fit: cover;
+    /* Para que se pueda visualizar en Ópera */
+}
+
+.nav-links{
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end !important;
+}
+
+/* Estilo para los hipervínculos del menú */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hover para los links al pasar el mouse */
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hover para el botón de Registrarse e Iniciar Sesión*/
+.btn-cac:hover {
+    color: var(--secondary-color) !important;
+    border: 2px solid var(--secondary-color);
+}
+
+/* Estilos con selectores descendientes para las etiquetas de título y subtítulo del banner */
+.card-banner h1 {
+    color: #FFF;
+    font-size: 3vw;
+}
+
+.card-banner h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilo para las películas de Las Tendencias de hoy */
+.movie-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 450ms;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+/* Estilo que se activa al pasar el cursor del mouse sobre el item */
+/* .movie-item:hover cuando el cursor está sobre un elemento con la clase .movie-item, se aplica una opacidad del 90% (0.9), lo que hace que el elemento se vuelva un poco más transparente. */
+.movie-item:hover {
+    opacity: 0.9;
+}
+
+/* Cambia la posición vertical (bottom) del elemento .movie-item-detail, moviéndolo hacia abajo, para revelar más información o detalles sobre el elemento de la película. */
+.movie-item:hover .movie-item-detail {
+    bottom: 0;
+}
+
+
+
+/* Estilo para cambiar el color de las películas que se muestran en Top Rated */
+.movie-item-detail-title-v2:hover {
+    color: var(--primary-color);
+}
+
+.grid-container {
+    display: grid;
+}
+.ofertas-container{
+    display: grid;
+}
+#of h2{
+    text-align: center;
+}
+#footer a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+#footer i {
+    margin-right: 5px;
+}
+
+/* Media Queries para dispositivos */
+/* css para un disp de escritotio*/
+@media only screen and (min-width: 1024px) {
+    /* Selector de etiqueta para body donde aplica color de fondo. */
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .ofertas-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    }
+    #footer{
+        gap: 220px;
+    }
+    .mitad1{
+        grid-template-columns: 1fr ;
+    }
+}
+
+/* para tablets */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    body{
+        background-color: #ACACAC;
+    } 
+    h2 {
+        font-size: 2vw;
+    }
+    h3 {
+        font-size: 1.5vw;
+    }
+
+    .login-text {
+        display: none;
+        
+    }
+
+    .logo-text {
+        display: none;
+       
+    }
+
+    #banner {
+        height: 400px;
+    }
+
+    #search {
+        height: 100px;
+        margin-left: 150px; 
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .card-banner {
+        padding: 0px 75px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .ofertas-container{
+        grid-template-columns: 1fr 1fr 1fr;
+      
+    }
+}
+
+/* CELULARES */
+@media screen and (min-width: 100px) and (max-width: 600px) {
+    body{
+        background-color: #878787;
+ }
+    h2 {
+        font-size: 3vw;
+    }
+    h3 {
+        font-size: 2vw;
+    }
+
+    .h2-subtitle {
+        font-size: 5vw;
+    }
+
+    .login-text {
+        display: none;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    #banner {
+        height: 300px;
+    }
+
+    #search {
+        height: 100px;
+        margin-left: 55px; 
+        
+    }
+
+    .container {
+        max-width: 420px;
+    }
+
+    .card-banner {
+        padding: 0px 50px;
+    }
+
+    .btn-cac {
+        font-size: 1vh;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer a {
+        padding: 2px 0px;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+
+    }
+    #footer {
+        flex-direction: row;
+        gap:20px;
+        
+    }
+    
+
+}
+

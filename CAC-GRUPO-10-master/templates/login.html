@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="../static/CSS/style-login.css">
+    <link rel="icon" href="../static/img/mobile-screen-solid.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/efc8487288.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <span class="logotexto">ALI - Veve</span>
+                <i class="fa-solid fa-mobile-screen fa-bounce"></i>
+            </a>
+        </div>
+        
+    </nav>
+
+    <main>
+        <section class="form-sesion">
+            <h5>Iniciar Sesión</h5>
+            <form action="#" name="formLogin" id="formLogin" method="GET" novalidate>
+               
+                <div class="form-control">
+                    <input  type="text" required name="username" id="username">
+                    <label>Usuario y/o Email</label>
+                </div>
+                <div class="error" id="error-username"></div>
+                
+                <div class="form-control"> 
+                    <input type="password" required name="password" id="password">
+                    <label>Contraseña</label>
+                </div>
+                <div class="error" id="error-password"></div>
+
+                
+                <button type="submit">Ingresar</button>
+                <div class="form-help">
+                    <a href="#">Olvidaste tu contreseña?</a>
+                </div>
+
+            </form>
+        </section>
+
+
+    </main>
+    <script src="../static/JS/login-validation.js"></script>
+    
+       
+</body>
+</html>
